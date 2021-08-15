@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
       title: 'Productos App',
       initialRoute: 'home',
       routes: {
-        'login': ( _ ) => LoginScreen(),
-        'home' : ( _ ) => HomeScreen(),
+        'login'  : ( _ ) => LoginScreen(),
+        'home'   : ( _ ) => HomeScreen(),
+        'product': ( _ ) => ProductScree(),
       },
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: Colors.grey[300],
@@ -22,8 +23,9 @@ class MyApp extends StatelessWidget {
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor:Colors.indigo,
-        elevation: 0,)
-      )
+        elevation: 0
+        )
+      ),
       
     );
   }
