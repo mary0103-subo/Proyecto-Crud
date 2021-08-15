@@ -14,9 +14,13 @@ class ProduCart extends StatelessWidget {
         height: 400,
         decoration:  _cardBorders(),
         child: Stack(
+          alignment: Alignment.bottomLeft,
           children: [
 
-            _BackgroundImage()
+            _BackgroundImage(),
+
+             _ProductDetails()
+
           ],
         ),
    
@@ -38,18 +42,34 @@ class ProduCart extends StatelessWidget {
   
 }
 
+class _ProductDetails extends StatelessWidget {
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      height: 70,
+      color: Colors.red,
+    );
+  }
+}
+
 class _BackgroundImage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
     
-    return Container(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(25),
+      child: Container(
       width: double.infinity,
       height: 400,
-      color: Colors.red,
       child: FadeInImage(
         placeholder: AssetImage('assets/jar-loading.gif'),
         image: NetworkImage('https://via.placehoder.com/400x300/f6f6f6'),
+        fit:BoxFit.cover,
+       ),
       ),
     );
   }
