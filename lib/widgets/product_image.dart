@@ -13,7 +13,7 @@ class ProductImage extends StatelessWidget {
        child: ClipRRect(
          borderRadius: BorderRadius.only( topLeft: Radius.circular(45), topRight:Radius.circular(45)),
          child: FadeInImage(
-           image:NetworkImage('https://via.placeholder.com/400x300/green') ,
+           image:NetworkImage('https://via.placeholder.com/400x300/green'),
            placeholder:AssetImage('images.jpg'),
            fit: BoxFit.cover,
          ),
