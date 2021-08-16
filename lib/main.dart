@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:productos_app/screens/screens.dart';
+import 'package:productos_app/services/services.dart';
+import 'package:provider/provider.dart';
  
-void main() => runApp(MyApp());
- 
+void main() => runApp(AppState());
+ class AppState extends StatelessWidget {
+   
+   @override
+   Widget build(BuildContext context) {
+     return MultiProvider(
+       providers: [
+          ChangeNotifierProvider (create:( _ ) => ProdutsService())
+       ],
+       child: MyApp(),
+       
+     );
+   }
+ }
+
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
